@@ -87,6 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  let currentProduct = null;
+  let currentStep = 0;
+
   const productCards = document.querySelectorAll(".product-card");
   const guideScreen = document.getElementById("guide-screen");
   const productSelection = document.getElementById("product-selection");
@@ -101,28 +104,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const stepWarning = document.getElementById("step-warning");
   const warningText = document.getElementById("warning-text");
   const validateBtn = document.getElementById("validate-btn");
-  const nextBtn = document.getElementById("next-btn");
-  const backBtn = document.getElementById("back-btn");
   const restartBtn = document.getElementById("restart-btn");
   const completedProduct = document.getElementById("completed-product");
   const completionSummary = document.getElementById("completion-summary");
 
-  let currentProduct = null;
-  let currentStep = 0;
-
   productCards.forEach(card => {
     card.addEventListener("click", () => {
-      currentProduct = card.dataset.product;
-      currentStep = 0;
-      loadStep();
-      productSelection.classList.remove("active");
-      guideScreen.classList.add("active");
+      const product = card.dataset.product;
+      if (guides[product]) {
+        currentProduct = product;
+        currentStep = 0;
+        loadStep();
+        productSelection.classList.remove("active");
+        guideScreen.classList.add("active");
+      }
     });
-  });
-
-  backBtn.addEventListener("click", () => {
-    guideScreen.classList.remove("active");
-    productSelection.classList.add("active");
   });
 
   validateBtn.addEventListener("click", () => {
