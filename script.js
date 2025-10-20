@@ -1,9 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
   const guides = {
-    r6: { title: "R6 Siege - Crusader", steps: [] },
-    valorant: { title: "Valorant - Internal", steps: [] },
-    fortnite: { title: "Fortnite - Ultimate", steps: [] },
-    bo6: { title: "Black Ops 6 - Advanced", steps: [] },
+    r6: {
+      title: "R6 Siege - Crusader",
+      steps: [
+        {
+          title: "Step 1",
+          description: "Basic setup for R6 Siege.",
+          instructions: ["Install Crusader", "Launch game", "Verify overlay"]
+        }
+      ]
+    },
+    valorant: {
+      title: "Valorant - Internal",
+      steps: [
+        {
+          title: "Step 1",
+          description: "Basic setup for Valorant Internal.",
+          instructions: ["Disable Vanguard", "Run loader", "Launch Valorant"]
+        }
+      ]
+    },
+    fortnite: {
+      title: "Fortnite - Ultimate",
+      steps: [
+        {
+          title: "Step 1",
+          description: "Basic setup for Fortnite Ultimate.",
+          instructions: ["Install Ultimate", "Run Fortnite", "Enable ESP"]
+        }
+      ]
+    },
+    bo6: {
+      title: "Black Ops 6 - Advanced",
+      steps: [
+        {
+          title: "Step 1",
+          description: "Basic setup for BO6 Advanced.",
+          instructions: ["Install Advanced", "Launch BO6", "Activate features"]
+        }
+      ]
+    },
     midnight: {
       title: "Midnight Spoofer - Temp HWID",
       steps: [
