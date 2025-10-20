@@ -20,6 +20,51 @@ document.addEventListener("DOMContentLoaded", () => {
             "Enable Intel VT-x or AMD-V.",
             "Save and exit BIOS."
           ]
+        },
+        {
+          title: "Disable Core Isolation",
+          description: "Turn off Memory Integrity in Windows.",
+          instructions: [
+            "Search 'Core Isolation' in Windows.",
+            "Turn off 'Memory Integrity'.",
+            "Restart your PC."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Disable or uninstall any antivirus software.",
+          instructions: [
+            "Open your antivirus dashboard.",
+            "Disable real-time protection and firewall.",
+            "Uninstall if necessary."
+          ]
+        },
+        {
+          title: "Disable Windows Defender",
+          description: "Use Defender Control to disable Defender.",
+          instructions: [
+            "Download Defender Control from Downloads tab.",
+            "Run and click 'Disable Defender'.",
+            "Confirm Defender is disabled."
+          ]
+        },
+        {
+          title: "Run Crusader Loader",
+          description: "Use the Crusader loader to inject.",
+          instructions: [
+            "Download loader from Downloads tab.",
+            "Run as administrator.",
+            "Follow on-screen instructions."
+          ]
+        },
+        {
+          title: "Final Check",
+          description: "Verify all steps are complete.",
+          instructions: [
+            "Secure Boot disabled, virtualization enabled.",
+            "Antivirus and Defender fully disabled.",
+            "Loader runs without errors."
+          ]
         }
       ]
     },
@@ -27,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Valorant - Internal",
       steps: [
         {
-          title: "Disable Vanguard",
-          description: "Uninstall Riot Vanguard.",
+          title: "Uninstall Vanguard",
+          description: "Remove Riot Vanguard anti-cheat.",
           instructions: [
             "Open Control Panel > Programs.",
             "Uninstall Riot Vanguard.",
@@ -36,12 +81,51 @@ document.addEventListener("DOMContentLoaded", () => {
           ]
         },
         {
-          title: "Run Loader",
-          description: "Use the Internal loader.",
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
           instructions: [
-            "Download loader from Downloads tab.",
-            "Run as administrator.",
-            "Inject before launching Valorant."
+            "Enter BIOS and disable Secure Boot.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
+          instructions: [
+            "Enable Intel VT-x or AMD-V in BIOS.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Core Isolation",
+          description: "Turn off Memory Integrity.",
+          instructions: [
+            "Search 'Core Isolation' in Windows.",
+            "Turn off 'Memory Integrity'."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Turn off or uninstall antivirus.",
+          instructions: [
+            "Disable real-time protection.",
+            "Uninstall if needed."
+          ]
+        },
+        {
+          title: "Disable Windows Defender",
+          description: "Use Defender Control.",
+          instructions: [
+            "Download Defender Control.",
+            "Run and click 'Disable Defender'."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Inject before launching Valorant.",
+          instructions: [
+            "Run loader as admin.",
+            "Inject before launching game."
           ]
         }
       ]
@@ -53,18 +137,57 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Disable Secure Boot",
           description: "Secure Boot must be disabled in BIOS.",
           instructions: [
-            "Restart your PC and enter BIOS.",
-            "Disable Secure Boot.",
+            "Enter BIOS and disable Secure Boot.",
             "Save and exit BIOS."
           ]
         },
         {
-          title: "Run Loader",
-          description: "Use the Ultimate loader.",
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
           instructions: [
-            "Download loader from Downloads tab.",
-            "Run as administrator.",
-            "Inject before launching Fortnite."
+            "Enable Intel VT-x or AMD-V in BIOS.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Core Isolation",
+          description: "Turn off Memory Integrity.",
+          instructions: [
+            "Search 'Core Isolation' in Windows.",
+            "Turn off 'Memory Integrity'."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Turn off or uninstall antivirus.",
+          instructions: [
+            "Disable real-time protection.",
+            "Uninstall if needed."
+          ]
+        },
+        {
+          title: "Disable Windows Defender",
+          description: "Use Defender Control.",
+          instructions: [
+            "Download Defender Control.",
+            "Run and click 'Disable Defender'."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Inject before launching Fortnite.",
+          instructions: [
+            "Run loader as admin.",
+            "Inject before launching game."
+          ]
+        },
+        {
+          title: "Final Check",
+          description: "Verify all steps are complete.",
+          instructions: [
+            "Secure Boot disabled, virtualization enabled.",
+            "Antivirus and Defender fully disabled.",
+            "Loader runs without errors."
           ]
         }
       ]
@@ -73,21 +196,60 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Black Ops 6 - Advanced",
       steps: [
         {
-          title: "Disable Antivirus",
-          description: "Disable or uninstall any antivirus software.",
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
           instructions: [
-            "Open your antivirus dashboard.",
-            "Disable real-time protection and firewall.",
-            "Uninstall if necessary."
+            "Enter BIOS and disable Secure Boot.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
+          instructions: [
+            "Enable Intel VT-x or AMD-V in BIOS.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Core Isolation",
+          description: "Turn off Memory Integrity.",
+          instructions: [
+            "Search 'Core Isolation' in Windows.",
+            "Turn off 'Memory Integrity'."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Turn off or uninstall antivirus.",
+          instructions: [
+            "Disable real-time protection.",
+            "Uninstall if needed."
+          ]
+        },
+        {
+          title: "Disable Windows Defender",
+          description: "Use Defender Control.",
+          instructions: [
+            "Download Defender Control.",
+            "Run and click 'Disable Defender'."
           ]
         },
         {
           title: "Run Loader",
-          description: "Use the Advanced loader.",
+          description: "Inject before launching BO6.",
           instructions: [
-            "Download loader from Downloads tab.",
-            "Run as administrator.",
-            "Inject before launching BO6."
+            "Run loader as admin.",
+            "Inject before launching game."
+          ]
+        },
+        {
+          title: "Final Check",
+          description: "Verify all steps are complete.",
+          instructions: [
+            "Secure Boot disabled, virtualization enabled.",
+            "Antivirus and Defender fully disabled.",
+            "Loader runs without errors."
           ]
         }
       ]
@@ -114,6 +276,30 @@ document.addEventListener("DOMContentLoaded", () => {
           ]
         },
         {
+          title: "Disable Antivirus",
+          description: "Turn off or uninstall antivirus software.",
+          instructions: [
+            "Disable real-time protection.",
+            "Uninstall if needed."
+          ]
+        },
+        {
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
+          instructions: [
+            "Enter BIOS and disable Secure Boot.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
+          instructions: [
+            "Enable Intel VT-x or AMD-V in BIOS.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
           title: "Run Spoofer",
           description: "Launch Midnight Spoofer and follow instructions.",
           instructions: [
@@ -121,13 +307,20 @@ document.addEventListener("DOMContentLoaded", () => {
             "Run 'RUN ME AND CLICK OK!'",
             "Launch Spoofer.exe",
             "Follow prompts to spoof HWID."
+          ]
+        },
+        {
+          title: "Final Check",
+          description: "Verify all steps are complete.",
+          instructions: [
+            "Secure Boot disabled, virtualization enabled.",
+            "Antivirus and Defender fully disabled.",
+            "Spoofer runs without errors."
           ],
           warning: "Do NOT have a Windows password set when performing SID spoofing. It will lock you out and require a full reinstall."
         }
       ]
-    }
-  };
-
+    };
   let currentProduct = null;
   let currentStep = 0;
 
