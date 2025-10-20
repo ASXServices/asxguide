@@ -274,3 +274,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  validateBtn.addEventListener("click", () => {
+    currentStep++;
+    const steps = guides[currentProduct].steps;
+    if (currentStep < steps.length) {
+      loadStep();
+    } else {
+      guideScreen.classList.remove("active");
+      completion
