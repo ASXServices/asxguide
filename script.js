@@ -262,10 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
   productCards.forEach(card => {
     card.addEventListener("click", () => {
       const product = card.dataset.product;
-      if (!guides[product]) {
-        console.error("Product not found:", product);
-        return;
-      }
+      if (!guides[product]) return;
       currentProduct = product;
       currentStep = 0;
       productSelection.classList.remove("active");
@@ -281,4 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
       loadStep();
     } else {
       guideScreen.classList.remove("active");
-      completion
+      completionScreen.classList.add("active");
+      completedProduct.textContent = guides[currentProduct].title;
+      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i +
