@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Disable Secure Boot",
           description: "Secure Boot must be disabled in BIOS.",
           instructions: [
-            "Restart your PC and enter BIOS (usually by pressing DEL or F2).",
+            "Restart your PC and enter BIOS.",
             "Navigate to Boot settings and disable Secure Boot.",
             "Save changes and exit BIOS."
           ]
@@ -19,33 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "Enter BIOS and locate virtualization settings.",
             "Enable Intel VT-x or AMD-V.",
             "Save and exit BIOS."
-          ]
-        },
-        {
-          title: "Disable Core Isolation",
-          description: "Turn off Memory Integrity in Windows.",
-          instructions: [
-            "Search 'Core Isolation' in Windows.",
-            "Turn off 'Memory Integrity'.",
-            "Restart your PC."
-          ]
-        },
-        {
-          title: "Disable Antivirus",
-          description: "Disable or uninstall any antivirus software.",
-          instructions: [
-            "Open your antivirus dashboard.",
-            "Disable real-time protection and firewall.",
-            "Uninstall if necessary."
-          ]
-        },
-        {
-          title: "Run Loader",
-          description: "Use the Crusader loader to inject.",
-          instructions: [
-            "Download loader from Downloads tab.",
-            "Run as administrator.",
-            "Follow on-screen instructions."
           ]
         }
       ]
@@ -60,15 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "Open Control Panel > Programs.",
             "Uninstall Riot Vanguard.",
             "Restart your PC."
-          ]
-        },
-        {
-          title: "Disable Antivirus",
-          description: "Disable or uninstall any antivirus software.",
-          instructions: [
-            "Open your antivirus dashboard.",
-            "Disable real-time protection and firewall.",
-            "Uninstall if necessary."
           ]
         },
         {
@@ -95,24 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ]
         },
         {
-          title: "Enable Virtualization",
-          description: "Ensure virtualization is enabled.",
-          instructions: [
-            "Enter BIOS and locate virtualization settings.",
-            "Enable Intel VT-x or AMD-V.",
-            "Save and exit BIOS."
-          ]
-        },
-        {
-          title: "Disable Antivirus",
-          description: "Disable or uninstall any antivirus software.",
-          instructions: [
-            "Open your antivirus dashboard.",
-            "Disable real-time protection and firewall.",
-            "Uninstall if necessary."
-          ]
-        },
-        {
           title: "Run Loader",
           description: "Use the Ultimate loader.",
           instructions: [
@@ -126,15 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     bo6: {
       title: "Black Ops 6 - Advanced",
       steps: [
-        {
-          title: "Disable Secure Boot",
-          description: "Secure Boot must be disabled in BIOS.",
-          instructions: [
-            "Restart your PC and enter BIOS.",
-            "Disable Secure Boot.",
-            "Save and exit BIOS."
-          ]
-        },
         {
           title: "Disable Antivirus",
           description: "Disable or uninstall any antivirus software.",
@@ -160,77 +97,30 @@ document.addEventListener("DOMContentLoaded", () => {
       steps: [
         {
           title: "Remove Anti-Cheat Software",
-          description: "Uninstall any anti-cheat software such as Riot Vanguard, BattleEye, or EasyAntiCheat.",
+          description: "Uninstall Riot Vanguard, BattleEye, EasyAntiCheat.",
           instructions: [
             "Open Control Panel > Programs and Features.",
-            "Locate and uninstall all anti-cheat software.",
-            "Restart your PC after removal."
+            "Uninstall all anti-cheat software.",
+            "Restart your PC."
           ]
         },
         {
-          title: "Disable All Antivirus Software",
-          description: "Turn off or uninstall any third-party antivirus software.",
+          title: "Disable Windows Defender",
+          description: "Use Defender Control to disable Defender.",
           instructions: [
-            "Open your antivirus dashboard.",
-            "Disable real-time protection and firewall.",
-            "Uninstall if necessary for full compatibility."
+            "Download Defender Control from Downloads tab.",
+            "Run and click 'Disable Defender'.",
+            "Confirm Defender is disabled."
           ]
         },
         {
-          title: "Disable Windows Defender with DControl",
-          description: "Use Defender Control to fully disable Windows Defender.",
+          title: "Run Spoofer",
+          description: "Launch Midnight Spoofer and follow instructions.",
           instructions: [
-            "Download Defender Control from the Downloads tab.",
-            "Run the tool and click 'Disable Defender'.",
-            "Confirm Defender is disabled in Windows Security."
-          ]
-        },
-        {
-          title: "Disable Secure Boot",
-          description: "Secure Boot must be disabled in BIOS.",
-          instructions: [
-            "Restart your PC and enter BIOS (usually by pressing DEL or F2).",
-            "Navigate to Boot settings and disable Secure Boot.",
-            "Save changes and exit BIOS."
-          ]
-        },
-        {
-          title: "Enable Virtualization",
-          description: "Ensure virtualization is enabled for proper spoofing.",
-          instructions: [
-            "Enter BIOS and locate virtualization settings.",
-            "Enable Intel VT-x or AMD-V.",
-            "Save and exit BIOS."
-          ]
-        },
-        {
-          title: "Final Verification",
-          description: "Confirm all previous steps are complete.",
-          instructions: [
-            "Check that antivirus and Defender are disabled.",
-            "Ensure Secure Boot is off and virtualization is on.",
-            "Proceed to the next step to run the program."
-          ]
-        },
-        {
-          title: "How to Run the Program",
-          description: "Get the download from the Downloads tab and follow these steps.",
-          instructions: [
-            "Download the loader from the Downloads tab.",
-            "Run 'RUN ME AND CLICK OK!' from https://drive.proton.me/urls/WG0PR01QK8#nPodTIdkIMGN.",
-            "Follow the PC Prep guide (only exploit protection).",
-            "Disable antivirus and Defender using DControl.",
-            "Search 'Core Isolation' and turn off 'Memory Integrity'.",
-            "Run the 'checker' program and save your serials.",
-            "Restart your PC.",
-            "Launch Spoofer.exe — a seed will be created automatically.",
-            "Do NOT change seed unless banned or switching games.",
-            "Avoid using a Windows PIN during SID spoofing.",
-            "Explore spoof options when prompted — always hit '1' to enable.",
-            "Avoid GPU spoofing for Fortnite tournaments.",
-            "Always enable ARP spoofing.",
-            "Use built-in cleaner for COD and Fortnite if needed.",
-            "⚠️ Do NOT run cracking tools — this may wipe your drive!"
+            "Download loader from Downloads tab.",
+            "Run 'RUN ME AND CLICK OK!'",
+            "Launch Spoofer.exe",
+            "Follow prompts to spoof HWID."
           ],
           warning: "Do NOT have a Windows password set when performing SID spoofing. It will lock you out and require a full reinstall."
         }
@@ -258,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const restartBtn = document.getElementById("restart-btn");
   const completedProduct = document.getElementById("completed-product");
   const completionSummary = document.getElementById("completion-summary");
+  const backBtn = document.getElementById("back-btn");
 
   productCards.forEach(card => {
     card.addEventListener("click", () => {
@@ -280,4 +171,35 @@ document.addEventListener("DOMContentLoaded", () => {
       guideScreen.classList.remove("active");
       completionScreen.classList.add("active");
       completedProduct.textContent = guides[currentProduct].title;
-      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i +
+      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong> ${step.title}</p>`).join("");
+    }
+  });
+
+  restartBtn.addEventListener("click", () => {
+    completionScreen.classList.remove("active");
+    productSelection.classList.add("active");
+  });
+
+  backBtn.addEventListener("click", () => {
+    guideScreen.classList.remove("active");
+    productSelection.classList.add("active");
+  });
+
+  function loadStep() {
+    const steps = guides[currentProduct].steps;
+    const step = steps[currentStep];
+    guideTitle.textContent = guides[currentProduct].title;
+    progressText.textContent = `Step ${currentStep + 1} of ${steps.length}`;
+    progressFill.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+    stepNumber.textContent = String(currentStep + 1).padStart(2, "0");
+    stepTitle.textContent = step.title;
+    stepDescription.textContent = step.description;
+    instructionsList.innerHTML = step.instructions.map(i => `<li>${i}</li>`).join("");
+    if (step.warning) {
+      stepWarning.style.display = "block";
+      warningText.textContent = step.warning;
+    } else {
+      stepWarning.style.display = "none";
+    }
+  }
+});
