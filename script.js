@@ -320,79 +320,13 @@ document.addEventListener("DOMContentLoaded", () => {
           warning: "Do NOT have a Windows password set when performing SID spoofing. It will lock you out and require a full reinstall."
         }
       ]
-    };
+    }
+  };
+
   let currentProduct = null;
   let currentStep = 0;
 
   const productCards = document.querySelectorAll(".product-card");
   const guideScreen = document.getElementById("guide-screen");
   const productSelection = document.getElementById("product-selection");
-  const completionScreen = document.getElementById("completion-screen");
-  const guideTitle = document.getElementById("guide-title");
-  const progressText = document.getElementById("progress-text");
-  const progressFill = document.getElementById("progress-fill");
-  const stepNumber = document.getElementById("step-number");
-  const stepTitle = document.getElementById("step-title");
-  const stepDescription = document.getElementById("step-description");
-  const instructionsList = document.getElementById("instructions-list");
-  const stepWarning = document.getElementById("step-warning");
-  const warningText = document.getElementById("warning-text");
-  const validateBtn = document.getElementById("validate-btn");
-  const restartBtn = document.getElementById("restart-btn");
-  const completedProduct = document.getElementById("completed-product");
-  const completionSummary = document.getElementById("completion-summary");
-  const backBtn = document.getElementById("back-btn");
-
-  productCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const product = card.dataset.product;
-      if (!guides[product]) return;
-      currentProduct = product;
-      currentStep = 0;
-      productSelection.classList.remove("active");
-      guideScreen.classList.add("active");
-      loadStep();
-    });
-  });
-
-  validateBtn.addEventListener("click", () => {
-    currentStep++;
-    const steps = guides[currentProduct].steps;
-    if (currentStep < steps.length) {
-      loadStep();
-    } else {
-      guideScreen.classList.remove("active");
-      completionScreen.classList.add("active");
-      completedProduct.textContent = guides[currentProduct].title;
-      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong> ${step.title}</p>`).join("");
-    }
-  });
-
-  restartBtn.addEventListener("click", () => {
-    completionScreen.classList.remove("active");
-    productSelection.classList.add("active");
-  });
-
-  backBtn.addEventListener("click", () => {
-    guideScreen.classList.remove("active");
-    productSelection.classList.add("active");
-  });
-
-  function loadStep() {
-    const steps = guides[currentProduct].steps;
-    const step = steps[currentStep];
-    guideTitle.textContent = guides[currentProduct].title;
-    progressText.textContent = `Step ${currentStep + 1} of ${steps.length}`;
-    progressFill.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
-    stepNumber.textContent = String(currentStep + 1).padStart(2, "0");
-    stepTitle.textContent = step.title;
-    stepDescription.textContent = step.description;
-    instructionsList.innerHTML = step.instructions.map(i => `<li>${i}</li>`).join("");
-    if (step.warning) {
-      stepWarning.style.display = "block";
-      warningText.textContent = step.warning;
-    } else {
-      stepWarning.style.display = "none";
-    }
-  }
-});
+  const completionScreen = document.getElementById("completion-screen
