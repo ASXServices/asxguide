@@ -4,9 +4,49 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "R6 Siege - Crusader",
       steps: [
         {
-          title: "Step 1",
-          description: "Basic setup for R6 Siege.",
-          instructions: ["Install Crusader", "Launch game", "Verify overlay"]
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
+          instructions: [
+            "Restart your PC and enter BIOS (usually by pressing DEL or F2).",
+            "Navigate to Boot settings and disable Secure Boot.",
+            "Save changes and exit BIOS."
+          ]
+        },
+        {
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
+          instructions: [
+            "Enter BIOS and locate virtualization settings.",
+            "Enable Intel VT-x or AMD-V.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Core Isolation",
+          description: "Turn off Memory Integrity in Windows.",
+          instructions: [
+            "Search 'Core Isolation' in Windows.",
+            "Turn off 'Memory Integrity'.",
+            "Restart your PC."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Disable or uninstall any antivirus software.",
+          instructions: [
+            "Open your antivirus dashboard.",
+            "Disable real-time protection and firewall.",
+            "Uninstall if necessary."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Use the Crusader loader to inject.",
+          instructions: [
+            "Download loader from Downloads tab.",
+            "Run as administrator.",
+            "Follow on-screen instructions."
+          ]
         }
       ]
     },
@@ -14,9 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Valorant - Internal",
       steps: [
         {
-          title: "Step 1",
-          description: "Basic setup for Valorant Internal.",
-          instructions: ["Disable Vanguard", "Run loader", "Launch Valorant"]
+          title: "Disable Vanguard",
+          description: "Uninstall Riot Vanguard.",
+          instructions: [
+            "Open Control Panel > Programs.",
+            "Uninstall Riot Vanguard.",
+            "Restart your PC."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Disable or uninstall any antivirus software.",
+          instructions: [
+            "Open your antivirus dashboard.",
+            "Disable real-time protection and firewall.",
+            "Uninstall if necessary."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Use the Internal loader.",
+          instructions: [
+            "Download loader from Downloads tab.",
+            "Run as administrator.",
+            "Inject before launching Valorant."
+          ]
         }
       ]
     },
@@ -24,9 +86,40 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Fortnite - Ultimate",
       steps: [
         {
-          title: "Step 1",
-          description: "Basic setup for Fortnite Ultimate.",
-          instructions: ["Install Ultimate", "Run Fortnite", "Enable ESP"]
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
+          instructions: [
+            "Restart your PC and enter BIOS.",
+            "Disable Secure Boot.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Enable Virtualization",
+          description: "Ensure virtualization is enabled.",
+          instructions: [
+            "Enter BIOS and locate virtualization settings.",
+            "Enable Intel VT-x or AMD-V.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Disable or uninstall any antivirus software.",
+          instructions: [
+            "Open your antivirus dashboard.",
+            "Disable real-time protection and firewall.",
+            "Uninstall if necessary."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Use the Ultimate loader.",
+          instructions: [
+            "Download loader from Downloads tab.",
+            "Run as administrator.",
+            "Inject before launching Fortnite."
+          ]
         }
       ]
     },
@@ -34,9 +127,31 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Black Ops 6 - Advanced",
       steps: [
         {
-          title: "Step 1",
-          description: "Basic setup for BO6 Advanced.",
-          instructions: ["Install Advanced", "Launch BO6", "Activate features"]
+          title: "Disable Secure Boot",
+          description: "Secure Boot must be disabled in BIOS.",
+          instructions: [
+            "Restart your PC and enter BIOS.",
+            "Disable Secure Boot.",
+            "Save and exit BIOS."
+          ]
+        },
+        {
+          title: "Disable Antivirus",
+          description: "Disable or uninstall any antivirus software.",
+          instructions: [
+            "Open your antivirus dashboard.",
+            "Disable real-time protection and firewall.",
+            "Uninstall if necessary."
+          ]
+        },
+        {
+          title: "Run Loader",
+          description: "Use the Advanced loader.",
+          instructions: [
+            "Download loader from Downloads tab.",
+            "Run as administrator.",
+            "Inject before launching BO6."
+          ]
         }
       ]
     },
@@ -159,41 +274,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  validateBtn.addEventListener("click", () => {
-    currentStep++;
-    const steps = guides[currentProduct].steps;
-    if (currentStep < steps.length) {
-      loadStep();
-    } else {
-      guideScreen.classList.remove("active");
-      completionScreen.classList.add("active");
-      completedProduct.textContent = guides[currentProduct].title;
-      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong> ${step.title}</p>`).join("");
-    }
-  });
-
-  restartBtn.addEventListener("click", () => {
-    completionScreen.classList.remove("active");
-    productSelection.classList.add("active");
-  });
-
-  function loadStep() {
-    const steps = guides[currentProduct].steps;
-    if (!steps || !steps[currentStep]) return;
-
-    const step = steps[currentStep];
-    guideTitle.textContent = guides[currentProduct].title;
-    progressText.textContent = `Step ${currentStep + 1} of ${steps.length}`;
-    progressFill.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
-    stepNumber.textContent = String(currentStep + 1).padStart(2, "0");
-    stepTitle.textContent = step.title;
-    stepDescription.textContent = step.description;
-    instructionsList.innerHTML = step.instructions.map(i => `<li>${i}</li>`).join("");
-    if (step.warning) {
-      stepWarning.style.display = "block";
-      warningText.textContent = step.warning;
-    } else {
-      stepWarning.style.display = "none";
-    }
-  }
-});
