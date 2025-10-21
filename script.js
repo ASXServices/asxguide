@@ -106,3 +106,44 @@ document.addEventListener("DOMContentLoaded", () => {
       completionScreen.classList.add("active");
       completedProduct.textContent = guides[currentProduct].title;
       completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong> ${step.title}</p>`).join("");
+    }
+  });
+
+  restartBtn.addEventListener("click", () => {
+    completionScreen.classList.remove("active");
+    productSelection.classList.add("active");
+    currentProduct = null;
+    currentStep = 0;
+  });
+
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      guideScreen.classList.remove("active");
+      productSelection.classList.add("active");
+      currentProduct = null;
+      currentStep = 0;
+    });
+  }
+
+  function loadStep() {
+    const guide = guides[currentProduct];
+    const step = guide.steps[currentStep];
+    const progress = ((currentStep + 1) / guide.steps.length) * 100;
+
+    guideTitle.textContent = guide.title;
+    progressText.textContent = `Step ${currentStep + 1} of ${guide.steps.length}`;
+    progressFill.style.width = `${progress}%`;
+    stepNumber.textContent = currentStep + 1;
+    stepTitle.textContent = step.title;
+    stepDescription.textContent = step.description;
+    
+    instructionsList.innerHTML = step.instructions.map(inst => `<li>${inst}</li>`).join("");
+    
+    if (step.warning) {
+      stepWarning.classList.add("active");
+      warningText.textContent = step.warning;
+    } else {
+      stepWarning.classList.remove("active");
+    }
+  }
+});
