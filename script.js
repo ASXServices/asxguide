@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "Final Check", description: "Verify all steps are complete.", instructions: ["Secure Boot off", "Virtualization on", "Antivirus and Defender disabled"] }
       ]
     },
+    // Add other products here (valorant, fortnite, bo6, midnight) using same format
+  };
     valorant: {
       title: "Valorant - Internal",
       steps: [
@@ -61,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     }
   };
-
   let currentProduct = null;
   let currentStep = 0;
 
@@ -105,4 +106,37 @@ document.addEventListener("DOMContentLoaded", () => {
       guideScreen.classList.remove("active");
       completionScreen.classList.add("active");
       completedProduct.textContent = guides[currentProduct].title;
-      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}
+      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong> ${step.title}</p>`).join("");
+    }
+  });
+
+  restartBtn.addEventListener("click", () => {
+    completionScreen.classList.remove("active");
+    productSelection.classList.add("active");
+  });
+
+  backBtn.addEventListener("click", () => {
+    guideScreen.classList.remove("active");
+    productSelection.classList.add("active");
+  });
+
+  function loadStep() {
+    const steps = guides[currentProduct].steps;
+    const step = steps[currentStep];
+    guideTitle.textContent = guides[currentProduct].title;
+    progressText.textContent = `Step ${currentStep + 1} of ${steps.length}`;
+    progressFill.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+    stepNumber.textContent = String(currentStep + 1).padStart(2, "0");
+    stepTitle.textContent = step.title;
+    stepDescription.textContent = step.description;
+    instructionsList.innerHTML = step.instructions.map(i => `<li>${i}</li>`).join("");
+    if (step.warning) {
+      stepWarning.style.display = "block";
+      warningText.textContent = step.warning;
+    } else {
+      stepWarning.style.display = "none";
+    }
+  }
+});
+
+
