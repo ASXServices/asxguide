@@ -104,5 +104,4 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       guideScreen.classList.remove("active");
       completionScreen.classList.add("active");
-      completedProduct.textContent = guides[currentProduct].title;
-      completionSummary.innerHTML = steps.map((step, i) => `<p><strong>Step ${i + 1}:</strong
+      completedProduct.textContent = guides[current
